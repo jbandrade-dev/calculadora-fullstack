@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs https//pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Feedback {
+  id        String   @id @default(cuid())
+  type      String
+  content   String
+  createdAt DateTime @default(now())
+}
+
+model Modules {
+  id              String @id @default(cuid())
+  nameModule      String
+  boxWidth        Int
+  boxHeight       Int
+  boxDepth        Int
+  moduleType      String
+  frontType       String
+  knobType        String
+  hingsType       String
+  slideType       String
+  bottomType      String
+  boxThickness    Int
+  frontThickness  Int
+  bottomThickness Int
+}

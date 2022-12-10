@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  @apply bg-black text-gray-100 list-none;
+  -webkit-font-smoothing: antialiased;
+}
+
+label {
+  @apply text-lg font-normal col-span-4 self-end;
+}
+
+.wrapper {
+  @apply mob:w-[min(55rem,_100%)] tablet:w-[min(62rem,_100%)] pc:w-[min(78rem,_100%)] mx-auto;
+}
+
+.input {
+  @apply flex col-span-8 text-lg  placeholder:pl-1 text-gray-400 items-center gap-3 h-9 px-1 rounded-md bg-gray-800 w-full;
+}
+
+.itemMenu {
+  @apply font-bold text-gray-100 hover:text-cyan-300;
+}
+
+.avatarCircular {
+  @apply w-12 h-12 rounded-full;
+}
+
+.avatarSquare {
+  @apply w-12 h-12 rounded;
+}
+
+.lineParts {
+  @apply flex justify-between w-full;
+}
+
+.itemLineParts {
+  @apply flex items-center gap-0.5 text-lg;
+}
+
+.swiper {
+  @apply w-full h-full;
+}
+
+div.swiper-pagination {
+  --swiper-theme-color: #81d8f7;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-inactive-color: #81d8f7;
+}
+
+button{
+  -webkit-appearance: button;
+}
